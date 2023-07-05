@@ -1,12 +1,13 @@
 package empresa.com.mi_primer_app.repository;
 
-import org.springframework.data.repository.CrudRepository;
-import org.springframework.stereotype.Repository;
+import java.util.List;
 
+import org.springframework.data.repository.CrudRepository;
 import empresa.com.mi_primer_app.models.Celular;
 
 
-@Repository
 public interface CelularRepository extends CrudRepository<Celular, Long> {
-    
+    public List<Celular> findAllByMarca(String marca);
+    public List<Celular> findByModelo(String modelo);
+    public Celular findOneById(Long id);
 }

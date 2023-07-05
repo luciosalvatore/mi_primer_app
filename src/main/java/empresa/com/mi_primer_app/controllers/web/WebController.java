@@ -1,4 +1,4 @@
-package empresa.com.mi_primer_app.controllers;
+package empresa.com.mi_primer_app.controllers.web;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -16,7 +16,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 public class WebController {
 
-	@GetMapping("/")
+	@GetMapping("/root")
 	public String root() {
 		return " Root page";
 	}
